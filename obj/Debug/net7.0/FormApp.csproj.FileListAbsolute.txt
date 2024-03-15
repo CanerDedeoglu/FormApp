@@ -1,3 +1,11 @@
+C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.AssemblyInfoInputs.cache
+C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.AssemblyInfo.cs
+C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.csproj.CoreCompileInputs.cache
+C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.RazorAssemblyInfo.cache
+C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.RazorAssemblyInfo.cs
+C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.sourcelink.json
 C:\Projeler\Backend-Bootcamp\FormApp\bin\Debug\net7.0\appsettings.Development.json
 C:\Projeler\Backend-Bootcamp\FormApp\bin\Debug\net7.0\appsettings.json
 C:\Projeler\Backend-Bootcamp\FormApp\bin\Debug\net7.0\FormApp.staticwebassets.runtime.json
@@ -6,13 +14,6 @@ C:\Projeler\Backend-Bootcamp\FormApp\bin\Debug\net7.0\FormApp.deps.json
 C:\Projeler\Backend-Bootcamp\FormApp\bin\Debug\net7.0\FormApp.runtimeconfig.json
 C:\Projeler\Backend-Bootcamp\FormApp\bin\Debug\net7.0\FormApp.dll
 C:\Projeler\Backend-Bootcamp\FormApp\bin\Debug\net7.0\FormApp.pdb
-C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.AssemblyInfoInputs.cache
-C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.AssemblyInfo.cs
-C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.csproj.CoreCompileInputs.cache
-C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.MvcApplicationPartsAssemblyInfo.cache
-C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.RazorAssemblyInfo.cache
-C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\FormApp.RazorAssemblyInfo.cs
 C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\staticwebassets.build.json
 C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\staticwebassets.development.json
 C:\Projeler\Backend-Bootcamp\FormApp\obj\Debug\net7.0\staticwebassets\msbuild.FormApp.Microsoft.AspNetCore.StaticWebAssets.props
