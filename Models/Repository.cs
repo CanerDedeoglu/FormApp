@@ -16,6 +16,20 @@ namespace FormApp.Models
         }
 
         public static List<Product> Products{get{return _product;}}
+
+        public static void CreateProduct(Product entity){
+            _product.Add(entity);
+        }
+        public static void EditProduct(Product entity){
+            var product = _product.FirstOrDefault(p => p.ProductId == entity.ProductId);
+            if(product != null){
+                product.BookName = entity.BookName;
+                product.CategoryId = entity.CategoryId;
+                product.PageCount = entity.PageCount;
+                product.Image = entity.Image;
+                product.IsActive = entity.IsActive;
+            }
+        }
         public  static List<Category> Categories {get{return _category;}}
 
     }

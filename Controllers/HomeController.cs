@@ -44,18 +44,96 @@ public class HomeController : Controller
         return View(Repository.Products);
     }
 
+    public IActionResult Details(int id)
+    {
+        if (id == 0)
+        {
+            return NotFound();
+        }
+        var entity = Repository.Products.FirstOrDefault(p => p.ProductId == id);
+        if (entity == null)
+        {
+            return NotFound();
+        }
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "CategoryName");
+        return View(entity);
+    }
+
     [HttpGet]
     public IActionResult Create()
     {
-       ViewBag.Categories = Repository.Categories;
-       return View();
-    }
-
-    [HttpPost]
-    public IActionResult Create(Product product)
-    {
-
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "CategoryName");
         return View();
     }
 
-}
+    [HttpPost]
+    public async Task<IActionResult> Create(Product model, IFormFile imageFile)
+    {
+        var allowedExtensions = new[] {".jpg",".jpeg",".png"};
+        var extension = Path.GetExtension(imageFile.FileName);
+        var randomfileName = string.Format($"{Guid.NewGuid().ToString()}{extension}") ;
+        var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/img",randomfileName);
+
+        if(imageFile != null){
+            if(!allowedExtensions.Contains(extension)){
+                ModelState.AddModelError("","Lütfen geçerli formatta resim yükleyiniz.");
+            }
+        }
+
+        if(ModelState.IsValid){
+            if(imageFile != null){
+            using(var stream = new FileStream(path,FileMode.Create)){
+                await imageFile.CopyToAsync(stream);
+            }}
+            model.Image = randomfileName;
+            model.ProductId = Repository.Products.Count +1;
+            Repository.CreateProduct(model);
+            return RedirectToAction("Index");  
+        }
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId","CategoryName");
+
+        return View(model);    
+            
+    }
+
+    public IActionResult Edit(int? id)
+    {
+        if(id == null){
+            return NotFound();
+        }
+        var entity = Repository.Products.FirstOrDefault(p => p.ProductId == id);
+        if(entity == null){
+            return NotFound();
+        }
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId","CategoryName");
+        return View(entity);
+    }
+
+    [HttpPost]
+
+    public async Task<IActionResult> Edit(int id, Product model, IFormFile? imageFile){
+
+        if(id != model.ProductId){
+            return NotFound();
+        }
+
+        if(ModelState.IsValid){
+            if(imageFile != null){
+                var allowedExtensions = new[] {".jpg",".jpeg",".png"};
+                var extension = Path.GetExtension(imageFile.FileName);
+                var randomfileName = string.Format($"{Guid.NewGuid().ToString()}{extension}") ;
+                var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/img",randomfileName);
+
+                using(var stream = new FileStream(path,FileMode.Create)){
+                await imageFile.CopyToAsync(stream);
+                }
+                model.Image = randomfileName;
+            }
+            Repository.EditProduct(model);
+            return RedirectToAction("Admin");
+        }    
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId","CategoryName");
+        return View(model);
+    }
+
+ }

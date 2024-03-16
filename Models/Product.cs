@@ -8,15 +8,23 @@ namespace FormApp.Models
         public int ProductId { get; set; }
 
         [Display(Name ="Kitap Adı ")]
-        public string BookName { get; set; } = String.Empty;
+        [Required(ErrorMessage = "Kitap adı boş geçilemez")]
+        public string BookName { get; set; } =null!;
+    
         [Display(Name ="Sayfa")]
+        [Required(ErrorMessage = "Sayfa sayısı boş geçilemez")]
+        [Range(1,1000,ErrorMessage ="Sayfa sayısı 1-1000 arasında olmalıdır")]
         public int PageCount { get; set; }
+
         [Display(Name ="Resim")]
-        public string Image { get; set; } = String.Empty;
+        public string? Image { get; set; } = string.Empty;
+
         [Display(Name ="Aktiflik")]
         public bool IsActive { get; set; } 
+
         [Display(Name ="Kategori Id")]
-        public int CategoryId { get; set; } 
+        [Required(ErrorMessage = "Kategori adı boş geçilemez")]
+        public int? CategoryId { get; set; } 
 
         
     }

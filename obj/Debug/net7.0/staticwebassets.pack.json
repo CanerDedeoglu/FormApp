@@ -25,6 +25,22 @@
       "PackagePath": "staticwebassets\\img\\3.jpeg"
     },
     {
+      "Id": "C:\\Projeler\\Backend-Bootcamp\\FormApp\\wwwroot\\img\\401cfcd1-df11-455a-abc3-76ae93369d78.jpeg",
+      "PackagePath": "staticwebassets\\img\\401cfcd1-df11-455a-abc3-76ae93369d78.jpeg"
+    },
+    {
+      "Id": "C:\\Projeler\\Backend-Bootcamp\\FormApp\\wwwroot\\img\\7960399f-6d89-4fe9-b208-5b4637fed27f.jpg",
+      "PackagePath": "staticwebassets\\img\\7960399f-6d89-4fe9-b208-5b4637fed27f.jpg"
+    },
+    {
+      "Id": "C:\\Projeler\\Backend-Bootcamp\\FormApp\\wwwroot\\img\\b5c0e578-db34-4fd2-909f-b5e8e916b7ab.jpeg",
+      "PackagePath": "staticwebassets\\img\\b5c0e578-db34-4fd2-909f-b5e8e916b7ab.jpeg"
+    },
+    {
+      "Id": "C:\\Projeler\\Backend-Bootcamp\\FormApp\\wwwroot\\img\\beddf9dd-0392-4601-90f9-6cf661076e9d.jpeg",
+      "PackagePath": "staticwebassets\\img\\beddf9dd-0392-4601-90f9-6cf661076e9d.jpeg"
+    },
+    {
       "Id": "C:\\Projeler\\Backend-Bootcamp\\FormApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
