@@ -20,14 +20,21 @@ namespace FormApp.Models
         public static void CreateProduct(Product entity){
             _product.Add(entity);
         }
-        public static void EditProduct(Product entity){
-            var product = _product.FirstOrDefault(p => p.ProductId == entity.ProductId);
-            if(product != null){
-                product.BookName = entity.BookName;
-                product.CategoryId = entity.CategoryId;
-                product.PageCount = entity.PageCount;
-                product.Image = entity.Image;
-                product.IsActive = entity.IsActive;
+        public static void EditProduct(Product updateProduct){
+            var entity = _product.FirstOrDefault(b=>b.ProductId == updateProduct.ProductId);
+            if(entity != null){
+                entity.BookName = updateProduct.BookName;
+                entity.PageCount = updateProduct.PageCount;
+                entity.Image = updateProduct.Image;
+                entity.CategoryId = updateProduct.CategoryId;
+                entity.IsActive = updateProduct.IsActive;
+            }
+        }
+
+        public static void DeleteProduct(Product entitys){
+            var entity = _product.FirstOrDefault(b=>b.ProductId == entitys.ProductId);
+            if(entity != null){
+                _product.Remove(entity);
             }
         }
         public  static List<Category> Categories {get{return _category;}}
